@@ -1,0 +1,36 @@
+{
+  "name": "orion",
+  "version": "1.0.0",
+  "description": "\"Web site institucional Órion Industrial\"",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.4.1",
+    "gulp-watch": "^4.3.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leomoreirarv/orion.git"
+  },
+  "keywords": [
+    "orion",
+    "kassio",
+    "parker",
+    "goiania"
+  ],
+  "author": "Leonardo Moreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leomoreirarv/orion/issues"
+  },
+  "homepage": "https://github.com/leomoreirarv/orion#readme"
+}

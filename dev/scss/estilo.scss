@@ -1,0 +1,85 @@
+/*Import Sans Narrow*/
+@import url("//fonts.googleapis.com/css?family=PT+Sans+Narrow");
+
+$font1: 'Arial Narrow', 'Open Sans', sans-serif;;
+$amarelo: #f1ce00;
+$cinza: #9e9e9e;
+
+/*CSS RESET*/
+*{
+  margin: 0;
+  color: #000;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+body{
+  font-family: $font1;
+  
+  header {
+    padding-top: 20px;
+    width: 1000px;
+    margin: 0 auto;
+
+    div#linha-topo{
+      display: table;
+      width: 100%;
+      a#btn-acesso-restrito{
+        background: $amarelo;
+        display: block;
+        width: 103px;
+        height: 21px;
+        text-align: center;
+        line-height: 21px;
+        font:{
+          size: 10.5px;
+          weight: bold;
+        }
+        float: right;
+        &:hover{
+          background: $cinza;
+          color: #fff;
+        }
+      }
+    }
+
+    h1#logo-topo {
+      background: url("../img/logo-orion.jpg") no-repeat;
+      width: 224px;
+      height: 77px;
+      text-indent: -9000px;
+    }
+
+    h3#logo-parker-store{
+      background: url("../img/logo-parker-store.jpg") no-repeat;
+      width: 103px;
+      height: 25px;
+      text-indent: -9000px;
+    }
+
+    nav#menu-topo{
+      ul{
+        display: table;
+        li{
+          display: inline-table;
+          a{
+            display: block;
+            background: $amarelo;
+            width: 96px;
+            height: 44px;
+            font-size: 14px;
+            text-align: center;
+            line-height: 44px;
+            &:hover{
+              background: $cinza;
+              color: #fff;
+            }
+          }
+
+        }
+      }
+    }
+
+  }  
+}

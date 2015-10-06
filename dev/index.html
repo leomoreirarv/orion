@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Órion Industrial - Distribuidor Parker</title>
+    <link href="css/all.min.css" rel="stylesheet" type="text/css">
     <script src="js/all.min.js"></script>
 </head>
 <body>
     <header>
-        <div id="logo-topo">Órion Industrial</div>
-        <nav>
+        <div id="linha-topo"><a href="#" id="btn-acesso-restrito">Acesso Restrito</a></div>
+        <h1 id="logo-topo">Órion Industrial</h1>
+        <nav id="menu-topo">
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">A Empresa</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Suporte</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="/#/">Início</a></li>
+                <li><a href="/#/empresa">A Empresa</a></li>
+                <li><a href="/#/produtos">Produtos</a></li>
+                <li><a href="/#/servicos">Serviços</a></li>
+                <li><a href="/#/suporte">Suporte</a></li>
+                <li><a href="/#/contato">Contato</a></li>
             </ul>
         </nav>
-        <div><a href="#">Acesso Restrito</a></div>
-        <div>Logotipo Parker Store</div>
+        <h3 id="logo-parker-store">Parker Store</h3>
         <div ng-controller="CtrlData">Goiânia - GO, {{datalocal}}</div>
     </header>
+    <main ng-view></main>
+    <footer></footer>
 </body>
 </html>

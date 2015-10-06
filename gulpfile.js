@@ -13,11 +13,14 @@ var html_array  =   [
         "dev/*.html",
         "dev/**/*.html"
     ],
-    sass_array  =   [],
+    sass_array  =   [
+        "dev/scss/estilo.scss"
+    ],
     css_array   =   [],
     js_array    =   [
         "node_modules/jquery/dist/jquery.js",
         "node_modules/angular/angular.js",
+        "node_modules/angular-route/angular-route.js",
         "dev/js/app.js",
         "dev/js/CtrlData.js"
     ];
@@ -36,6 +39,15 @@ gulp.task("html", function(){
        .pipe(connect.reload());
 });
 
+gulp.task("sass", function(){
+   gulp.src(sass_array)
+       .pipe(sass())
+       .pipe(concat("all.min.css"))
+       .pipe(minify_html())
+       .pipe(gulp.dest("prod/css/"))
+       .pipe(connect.reload());
+});
+
 gulp.task("js", function(){
    gulp.src(js_array)
        .pipe(concat("all.min.js"))
@@ -46,7 +58,8 @@ gulp.task("js", function(){
 
 gulp.task("watch", function(){
     gulp.watch(html_array, ["html"]);
+    gulp.watch(sass_array, ["sass"]);
     gulp.watch(js_array, ["js"]);
 });
 
-gulp.task("default", ["connect", "html", "js", "watch"]);
+gulp.task("default", ["connect", "html", "sass", "js", "watch"]);

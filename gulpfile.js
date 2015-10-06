@@ -40,10 +40,13 @@ gulp.task("html", function(){
 });
 
 gulp.task("sass", function(){
+    var opts = {
+      comments: true
+    };
    gulp.src(sass_array)
        .pipe(sass())
        .pipe(concat("all.min.css"))
-       .pipe(minify_html())
+       .pipe(minify_html(opts))
        .pipe(gulp.dest("prod/css/"))
        .pipe(connect.reload());
 });

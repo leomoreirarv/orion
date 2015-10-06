@@ -7,23 +7,42 @@
     <script src="js/all.min.js"></script>
 </head>
 <body>
-    <header>
-        <div id="linha-topo"><a href="#" id="btn-acesso-restrito">Acesso Restrito</a></div>
-        <h1 id="logo-topo">Órion Industrial</h1>
-        <nav id="menu-topo">
-            <ul>
-                <li><a href="/#/">Início</a></li>
-                <li><a href="/#/empresa">A Empresa</a></li>
-                <li><a href="/#/produtos">Produtos</a></li>
-                <li><a href="/#/servicos">Serviços</a></li>
-                <li><a href="/#/suporte">Suporte</a></li>
-                <li><a href="/#/contato">Contato</a></li>
-            </ul>
-        </nav>
-        <h3 id="logo-parker-store">Parker Store</h3>
-        <div ng-controller="CtrlData">Goiânia - GO, {{datalocal}}</div>
-    </header>
-    <main ng-view></main>
-    <footer></footer>
+    <div id="todo">
+        <header>
+            <div id="linha-topo"><a href="#" id="btn-acesso-restrito">Acesso Restrito</a></div>
+            <h1 id="logo-topo">Órion Industrial</h1>
+            <nav id="menu-topo">
+                <ul>
+                    <li><a href="/#/">Início</a></li>
+                    <li><a href="/#/empresa">A Empresa</a></li>
+                    <li><a href="/#/produtos">Produtos</a></li>
+                    <li><a href="/#/servicos">Serviços</a></li>
+                    <li><a href="/#/suporte">Suporte</a></li>
+                    <li><a href="/#/contato">Contato</a></li>
+                </ul>
+            </nav>
+            <h3 id="logo-parker-store">Parker Store</h3>
+            <div ng-controller="CtrlData" id="local-data">Goiânia - GO, {{datalocal}}</div>
+        </header>
+        <main ng-view></main>
+        <footer>
+            <div id="meio-footer">
+                <div class="col-footer">
+                    <p>Orion Industrial LTDA © Copryright 2013 - Todos os Direitos Reservados</p>
+                    <h4>(62)3296-3448 - (62)3296-2902</h4>
+                    <p>Av. Ville (Anel Viário) 1959 - Residencial Center Ville  - Goiânia - GO</p>
+                    <p>orion@orion-industrial.com.br -  www.orion-industrial.com.br</p>
+                    <div id="linha-maps-form">
+                        <div>
+                            Google Maps
+                        </div>
+                        <div>Formulário</div>
+                    </div>
+                </div>
+                <div class="col-footer"></div>
+                <div class="col-footer"></div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>

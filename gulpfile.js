@@ -2,7 +2,7 @@
 var gulp    =   require("gulp"),
     concat  =   require("gulp-concat"),
     connect =   require("gulp-connect"),
-    rename  =   require("gulp-rename"),
+    //rename  =   require("gulp-rename"),
     sass    =   require("gulp-sass"),
     uglify  =   require("gulp-uglify"),
     watch   =   require("gulp-watch"),
@@ -16,13 +16,14 @@ var html_array  =   [
     sass_array  =   [
         "dev/scss/estilo.scss"
     ],
-    css_array   =   [],
     js_array    =   [
         "node_modules/jquery/dist/jquery.js",
         "node_modules/angular/angular.js",
         "node_modules/angular-route/angular-route.js",
         "dev/js/app.js",
-        "dev/js/CtrlData.js"
+        "dev/js/SrvHelpers.js",
+        "dev/js/CtrlData.js",
+        "dev/js/CtrlHome.js"
     ];
 
 gulp.task("connect", function(){

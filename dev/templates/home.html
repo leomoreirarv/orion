@@ -1,1 +1,33 @@
-<h1>home</h1>
+<div ng-controller="CtrlHome">
+  <article id="banner-home" style="background-image: url('{{banner}}')">
+        <section>
+            <h1>Tecnologia, Inovação e Dinamismo</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta illum incidunt laborum maxime molestiae optio
+                porro quia quo voluptas! Aliquam, blanditiis error facere nihil saepe ullam! Error odio quos veritatis!</p>
+        </section>
+    </article>
+    <article id="produtos-home">
+        <section>
+            <img ng-repeat="img in imagensProdutos"
+                    src="http://www.orion-industrial.com.br/arquivos/produto/front-{{img.id}}-0.jpg">
+            <h4>Conheça nossa completa linha de produtos e serviços oferecidos para sua industria</h4>
+        </section>
+    </article>
+    <article id="empresa-home">
+        <div>
+            <img src="http://www.orion-industrial.com.br/arquivos/institucional/front-1-0.jpg">
+            <img src="http://www.orion-industrial.com.br/arquivos/institucional/front-1-0.jpg">
+        </div>
+        <div>
+            <h1>Órion Industrial</h1>
+            <p>{{textoInstitucional}}</p>
+            <span><a href="/#/empresa">Leia Mais</a></span>
+            <div id="logos-parker-home">
+                <img src="img/logo-parker-1.jpg" alt="Parker Hidráulica"/>
+                <img src="img/logo-parker-2.jpg" alt="Parker Eletrônica"/>
+                <img src="img/logo-parker-3.jpg" alt="Parker Filtração"/>
+                <img src="img/logo-parker-4.jpg" alt="Parker Pneumática"/>
+            </div>
+        </div>
+    </article>
+</div>

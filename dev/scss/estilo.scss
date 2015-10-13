@@ -107,7 +107,173 @@ body{
 
     }
     main {
+
+      article#meio-conteudo{
+        width: 1000px;
+        margin: 0 auto;
+        display: table;
+        span#voltar{
+          display: block;
+          clear: both;
+          text-align: center;
+          font-size: 16px;
+          a{
+            font-weight: bold;
+            &:hover{
+              color: $amarelo;
+            }
+          }
+        }
+        h1{
+          font-size: 40px;
+          margin: 40px 0 20px 0;
+        }
+        figure#capa-institucional{
+          float: left;
+          display: table;
+          margin: 0 20px 20px 0;
+          position: relative;
+          width: 400px;
+          height: 400px;
+          img{
+            width: 320px;
+            height: 200px;
+            box-shadow: #999 5px 5px 5px;
+            position: absolute;
+            &:nth-child(2){
+              -ms-transform: rotate(20deg); /* IE 9 */
+              -webkit-transform: rotate(20deg); /* Chrome, Safari, Opera */
+              transform: rotate(20deg);
+              top: 100px;
+              left: 50px;
+            }
+          }
+        }
+      }
+
       padding-bottom: 420px;
+      article#banner-home{
+        margin-top: 20px;
+        width: 100%;
+        height: 600px;
+        background: {
+          size: cover;
+          position: center center;
+        };
+        section{
+          background: url("../img/listras.png");
+          width: 1000px;
+          height: 600px;
+          margin: 0 auto;
+          *{
+            color: #fff;
+          }
+          h1, p{
+            display: block;
+            width: 593px;
+            margin-left: 20px;
+            text-shadow: #333 3px 3px 3px;
+          }
+          h1{
+            font-size: 70px;
+            line-height: 60px;
+            padding-top: 290px;
+          }
+          p{
+            font-size: 22px;
+          }
+        }
+      }
+      article#produtos-home{
+        width: 100%;
+        height: 515px;
+        background: $amarelo;
+        section{
+          padding-top: 60px;
+          min-width: 960px;
+          display: table;
+          margin: 0 auto;
+          img {
+            width: 210px;
+            height: 210px;
+            border-radius: 105px;
+            border: solid 6px $cinza;
+            margin-right: 20px;
+          }
+          h4{
+            padding-top: 35px;
+            text-align: center;
+            font-size: 50px;
+            line-height: 40px;
+            display: block;
+            width: 620px;
+            margin: 0 auto;
+          }
+        }
+      }
+      article#empresa-home{
+        width: 960px;
+        padding: 0 20px;
+        margin: 0 auto;
+        display: table;
+        div{
+          width: 50%;
+          float: left;
+          &:first-child{
+            position: relative;
+            img{
+              border: 10px solid #dedede;
+              box-shadow: #999 5px 5px 15px;
+              width: 330px;
+              height: 200px;
+              &:first-child{
+                margin-top: 40px;
+              }
+              &:last-child{
+                position: absolute;
+                z-index: 1000;
+                left: 80px;
+                top: 144px;
+                -ms-transform: rotate(20deg); /* IE 9 */
+                -webkit-transform: rotate(20deg); /* Chrome, Safari, Opera */
+                transform: rotate(20deg);
+              }
+            }
+          }
+          &:last-child{
+            h1{
+              font-size: 50px;
+              margin-top: 35px;
+            }
+            p, span{
+              font-size: 22px;
+              text-align: justify;
+              line-height: 30px;
+              a{
+                color: $amarelo;
+                &:hover{
+                  color: $cinza2;
+                }
+              }
+            }
+            span{
+              text-align: right;
+              display: block;
+              width: 100%;
+            }
+            div#logos-parker-home{
+              width: 100%;
+              margin-top: 20px;
+              img{
+                margin-right: 9px;
+                &:last-child{
+                  margin: 0;
+                }
+              }
+            }
+          }
+        }
+      }
     }
 
     footer {
@@ -117,13 +283,28 @@ body{
       position: absolute;
       bottom: 0;
       div#meio-footer {
-        width: 1000px;
+        width: 960px;
         margin: 0 auto;
         display: table;
         padding: 20px;
         div.col-footer {
           float: left;
-          width: 470px;
+          &:first-child{
+            width: 470px;
+          }
+          &:nth-child(2){
+            padding: 0 20px;
+            width: 225px;
+            text-align: center;
+          }
+          &:last-child{
+            width: 225px;
+            img{
+              margin: 0 7.5px;
+              &:first-child{ margin-left: 0; }
+              &:last-child{ margin-right: 0; }
+            }
+          }
           * {
             color: #fff;
             font-size: 14px;
@@ -136,9 +317,32 @@ body{
           div#linha-maps-form{
             display: table;
             width: 100%;
+            margin-top: 10px;
             div{
               float: left;
               width: 50%;
+              form{
+                input[type=text],
+                input[type=email],
+                textarea{
+                  width: 225px;
+                  padding: 10px 5px;
+                  margin-bottom: 10px;
+                  height: 16px;
+                  box-shadow: inset #666 3px 3px 15px;
+                  color: #000;
+                }
+                textarea{
+                  height: 70px;
+                }
+                input[type=submit]{
+                  width: 103px;
+                  height: 25px;
+                  background: $amarelo;
+                  color: #000;font-size: 12px;
+                  float: right;
+                }
+              }
             }
           }
         }

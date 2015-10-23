@@ -112,6 +112,36 @@ body{
         width: 1000px;
         margin: 0 auto;
         display: table;
+        >p{
+          font-size: 22px;
+        }
+        dl{
+          display: table;
+          width: 100%;
+          margin-top: 20px;
+          dd{
+            font-size: 28px;
+            border-bottom: 1px solid $amarelo;
+          }
+          dt{
+            display: table;
+            figure{
+              width: 212px;
+              height: 160px;
+              padding: 10px;
+              margin: 9px;
+              display: block;
+              float: left;
+              figcaption{
+                text-align: center;
+                font:{
+                  size: 16px;
+                  weight: bold;
+                }
+              }
+            }
+          }
+        }
         span#voltar{
           display: block;
           clear: both;
@@ -138,7 +168,7 @@ body{
           img{
             width: 320px;
             height: 200px;
-            box-shadow: #999 5px 5px 5px;
+            box-shadow: #999 5px 5px 15px;
             position: absolute;
             &:nth-child(2){
               -ms-transform: rotate(20deg); /* IE 9 */

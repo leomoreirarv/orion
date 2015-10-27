@@ -14,6 +14,9 @@ var orion = angular.module("Orion", ["ngRoute"]);
                     .when("/produtos", {
                         templateUrl: "templates/produtos.html"
                     })
+                    .when("/produto/id/:index", {
+                        templateUrl: "templates/produto.html"
+                    })
                     .when("/servicos", {
                         templateUrl: "templates/servicos.html"
                     })

@@ -24,7 +24,9 @@ var html_array  =   [
         "dev/js/SrvHelpers.js",
         "dev/js/CtrlData.js",
         "dev/js/CtrlHome.js",
-        "dev/js/CtrlInstitucional.js"
+        "dev/js/CtrlInstitucional.js",
+        "dev/js/CtrlProdutos.js",
+        "dev/js/CtrlProduto.js"
     ];
 
 gulp.task("connect", function(){

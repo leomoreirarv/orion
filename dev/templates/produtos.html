@@ -1,60 +1,19 @@
-<article id="meio-conteudo">
+<article id="meio-conteudo" ng-controller="CtrlProdutos">
     <h1>Produtos</h1>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam autem cum, dolores, eos fugiat harum id
-        iste magni natus placeat quam quia quo quod reiciendis vel veniam voluptatum? Omnis.</p>
+    <p>{{abertura}}</p>
     <dl>
-        <dd>Eletromecânica</dd>
+        <categorias ng-repeat="produto in produtos">
+        <dd>{{produto.categoria}}</dd>
         <dt>
-            <figure>
-                <img src="http://www.lorempixel.com/212/121/food/1">
-                <figcaption>Servodrivers e Serviço Motores</figcaption>
-            </figure>
-            <figure>
-                <img src="http://www.lorempixel.com/212/121/food/2">
-                <figcaption>IHM e Softwares</figcaption>
-            </figure>
-            <figure>
-                <img src="http://www.lorempixel.com/212/121/food/3">
-                <figcaption>Inversores de frequencia e motores DC</figcaption>
-            </figure>
-            <figure>
-                <img src="http://www.lorempixel.com/212/121/food/1">
-                <figcaption>Servodrivers e Serviço Motores</figcaption>
-            </figure>
-            <figure>
-                <img src="http://www.lorempixel.com/212/121/food/2">
-                <figcaption>IHM e Softwares</figcaption>
-            </figure>
-            <figure>
-                <img src="http://www.lorempixel.com/212/121/food/3">
-                <figcaption>Inversores de frequencia e motores DC</figcaption>
+            <figure ng-repeat="item in produto.produtos">
+                <a href="#/produto/id/{{item.produtoid}}">
+                <img src="http://www.orion-industrial.com.br/arquivos/produto/front-{{item.produtoid}}-0.jpg">
+                </a>
+                <figcaption>{{item.produtotitulo}}</figcaption>
             </figure>
         </dt>
-        <dd>Filtração Industrial</dd>
-        <dt>
-            <figure>
-                <img src="http://www.lorempixel.com/212/121/food/4">
-                <figcaption>Filtros Industriais - Linha Hidráulica</figcaption>
-            </figure>
-            <figure>
-                <img src="http://www.lorempixel.com/212/121/food/5">
-                <figcaption>Filtros Industriais - Rede de ar comprimido e gases</figcaption>
-            </figure>
-            <figure>
-                <img src="http://www.lorempixel.com/212/121/food/6">
-                <figcaption>Unidades de Filtração</figcaption>
-            </figure>
-        </dt>
-        <dd>Hidráulica Industrial</dd>
-        <dt>
-            <figure>
-                <img src="http://www.lorempixel.com/212/121/food/7">
-                <figcaption>Bombas Hidráulicas</figcaption>
-            </figure>
-        </dt>
-        <dd>Pneumática</dd>
-        <dt></dt>
-    </dl>
+        </categorias>
+     </dl>
     <span id="voltar"><a href="javascript:history.back(-1);">Voltar</a></span>
 </article>

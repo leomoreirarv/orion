@@ -1,4 +1,26 @@
 <article id="meio-conteudo" ng-controller="CtrlProduto">
     <h1>{{titulo}}</h1>
     <p>{{texto}}</p>
+    <br><br>
+    <h4>Catálogos</h4>
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Descrição</th>
+                <th>Data</th>
+                <th>Tipo</th>
+                <th>Tamanho</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="down in download">
+                <td>{{down.titulo}}</td>
+                <td>{{down.texto}}</td>
+                <td>{{down.data}}</td>
+                <td>{{down.type}}</td>
+                <td>{{down.tamanho}}</td>
+            </tr>
+        </tbody>
+    </table>
 </article>

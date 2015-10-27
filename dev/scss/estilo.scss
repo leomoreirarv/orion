@@ -112,6 +112,22 @@ body{
         width: 1000px;
         margin: 0 auto;
         display: table;
+        table{
+          width: 100%;
+          thead{
+            th{
+              padding: 5px;
+              background: $cinza2;
+              color: #fff;
+            }
+          }
+          tbody{
+            td{
+              padding: 5px;
+              border-bottom: 1px solid $cinza2;
+            }
+          }
+        }
         >p{
           font-size: 22px;
         }

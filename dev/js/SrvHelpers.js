@@ -1,5 +1,5 @@
 orion.
-    service("SrvHelpers", function(){
+    service("SrvHelpers", ["$http", function($http){
         this.strip_tags = function (input, allowed) {
             allowed = (((allowed || '') + '')
                 .toLowerCase()
@@ -17,4 +17,14 @@ orion.
             var vetorData = data.split("-");
             return vetorData[2] + "/" + vetorData[1] + "/" + vetorData[0];
         }
-    });
+
+        this.fileExists = function(url){
+            $http.get(url)
+                .success(function(){
+                    return this;
+                })
+                .error(function(){
+                    console.error("Arquivo não encontrado");
+                })
+        }
+    }]);

@@ -23,4 +23,7 @@ orion
                 });
                 $scope.datas = datas;
             });
+
+            //console.log(SrvHelpers.fileExists("./img/logo-parker-store.jpg"));
+
     }]);

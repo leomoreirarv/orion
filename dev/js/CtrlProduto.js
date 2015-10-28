@@ -17,6 +17,10 @@ orion
         $http.get("http://www.orion-industrial.com.br/novo/webservice/downloads.php?id="+$routeParams.index)
             .success(function(data){
                 $scope.download = data;
-                console.log(data);
+                var datas = [];
+                data.forEach(function(elemento){
+                    datas.push(SrvHelpers.dataAmericanToBrazilian(elemento.data));
+                });
+                $scope.datas = datas;
             });
     }]);

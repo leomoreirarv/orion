@@ -12,4 +12,9 @@ orion.
                     return allowed.indexOf('<' + $1.toLowerCase() + '>') > -1 ? $0 : '';
                 });
         }
+
+        this.dataAmericanToBrazilian = function(data){
+            var vetorData = data.split("-");
+            return vetorData[2] + "/" + vetorData[1] + "/" + vetorData[0];
+        }
     });

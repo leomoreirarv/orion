@@ -3,7 +3,7 @@ var orion = angular.module("Orion", ["ngRoute"]);
     orion.
         config([
             "$routeProvider",
-            function($routeProvider){
+            function($routeProvider) {
                 $routeProvider
                     .when("/", {
                         templateUrl: "templates/home.html"

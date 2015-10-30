@@ -24,6 +24,19 @@ orion
                 $scope.datas = datas;
             });
 
-            //console.log(SrvHelpers.fileExists("./img/logo-parker-store.jpg"));
+
+        $http
+            .post("http://www.orion-industrial.com.br/novo/webservice/imagens.php", {
+                dir: "./img",
+                regex: ""
+            })
+            .success(function(data){
+                console.log(data);
+            })
+            .error(function(){
+                console.error("Erro");
+            });
+
+
 
     }]);

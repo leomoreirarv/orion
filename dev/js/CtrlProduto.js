@@ -18,20 +18,36 @@ orion
             .success(function(data){
                 $scope.download = data;
                 var datas = [];
-                data.forEach(function(elemento){
+                var textosDownload = [];
+                var urlDownload = []
+                data.forEach(function(elemento, i){
                     datas.push(SrvHelpers.dataAmericanToBrazilian(elemento.data));
+                    textosDownload.push(SrvHelpers.strip_tags(elemento.texto));
+
+                    var endereco = null;
+                    if(data[i].opcao == 1){
+                        endereco = "http://www.orion-industrial.com.br/arquivos/download/downs-"+data[i].id+"-0."+data[i].type;
+                    } else {
+                        endereco = data[i].url;
+                    }
+
+                    urlDownload.push(endereco.toLowerCase());
                 });
+
                 $scope.datas = datas;
+                $scope.textosDownload = textosDownload;
+                $scope.urlDownload = urlDownload;
+
             });
 
 
         $http
             .post("http://www.orion-industrial.com.br/novo/webservice/imagens.php", {
-                dir: "./img",
-                regex: ""
+                dir: "../../arquivos/produto",
+                regex: '/^(front-'+$routeParams.index+'-).(.jpg)$/'
             })
             .success(function(data){
-                console.log(data);
+                $scope.imagens = data;
             })
             .error(function(){
                 console.error("Erro");

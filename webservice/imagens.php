@@ -12,7 +12,8 @@
         $dir = $request->dir;
         $regex = $request->regex;
 
-        $files = new Files("./img", $regex);
+        $files = new Files($dir, $regex);
+
         echo json_encode($files->montaVetor());
     } catch(Exception $e){
         $erro = array(

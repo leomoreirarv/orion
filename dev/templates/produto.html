@@ -1,25 +1,34 @@
 <article id="meio-conteudo" ng-controller="CtrlProduto">
     <h1>{{titulo}}</h1>
     <p>{{texto}}</p>
+    <br>
+    <img ng-repeat="imagem in imagens" src="{{imagem.path}}/{{imagem.name}}">
     <br><br>
-    <h4>Catálogos</h4>
     <table>
         <thead>
+            <tr>
+                <th colspan="6">Catálogos e Fichas Técnicas</th>
+            </tr>
             <tr>
                 <th>Título</th>
                 <th>Descrição</th>
                 <th>Data</th>
                 <th>Tipo</th>
                 <th>Tamanho</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             <tr ng-repeat="down in download">
                 <td>{{down.titulo}}</td>
-                <td>{{down.texto}}</td>
+                <td>{{textosDownload[$index]}}</td>
                 <td>{{datas[$index]}}</td>
-                <td>{{down.type}}</td>
+                <td ng-switch on="down.type">
+                    <span ng-switch-when="DEFAULT">--</span>
+                    <span ng-switch-default>{{down.type}}</span>
+                </td>
                 <td>{{down.tamanho}}</td>
+                <td><a target="_blank" href="{{urlDownload[$index]}}">download</a></td>
             </tr>
         </tbody>
     </table>

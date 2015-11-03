@@ -12,7 +12,7 @@
         $id = $_GET['id'];
         $dados = $bd->consulta(
         "SELECT
-            titulo, texto, data, url, type, tamanho, opcao, produtoitem_id
+            id, titulo, texto, data, url, type, tamanho, opcao, produtoitem_id
             FROM downloaditem
             WHERE produtoitem_id=$id"
         );

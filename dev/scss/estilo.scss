@@ -112,6 +112,45 @@ body{
         width: 1000px;
         margin: 0 auto;
         display: table;
+        div.mensagem{
+          diplay: table;
+          margin: 0 auto;
+          padding: 10px;
+          background: $amarelo;
+          font-size: 16px;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        form{
+          width: 48%;
+          padding: 1%;
+          float: left;
+          label{
+            display: table;
+            line-height: 30px;
+            width: 100%;
+            font-size: 22px;
+            margin-bottom: 20px;
+            input[type=text],
+            textarea{
+              float: right;
+              padding: 10px 10px;
+              width: 350px;
+              font-size: 20px;
+              color: $cinza;
+              box-shadow: inset $cinza 3px 3px 15px;
+            }
+            textarea{
+              height: 150px;
+            }
+          }
+          input[type=submit]{
+            float: right;
+            padding: 10px 20px;
+            background: $amarelo;
+            font-size: 22px;
+          }
+        }
         table{
           width: 100%;
           thead{

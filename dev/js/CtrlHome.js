@@ -13,6 +13,7 @@ orion
                 imgProd.forEach(function (img) {
                     imagensProdutos.push(img);
                 });
+
                 $scope.imagensProdutos = imagensProdutos;
             })
             .error(function(){

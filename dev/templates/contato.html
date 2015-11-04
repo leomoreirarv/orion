@@ -1,5 +1,29 @@
-<article id="meio-conteudo">
+<article id="meio-conteudo" ng-controller="CtrlContato">
     <h1>Contato</h1>
+    <p>{{dados.abertura[0].texto}}</p>
+    <form>
+        <div ng-hide="!mensagem" class="mensagem">{{mensagem}}</div>
 
+        <label>Nome:
+            <input type="text" ng-model="form.nome"/>
+        </label>
+        <label>Telefone:
+            <input type="text" ng-model="form.telefone"/>
+        </label>
+        <label>E-mail:
+            <input type="text" ng-model="form.email"/>
+        </label>
+        <label>Solicitação:
+            <textarea ng-model="form.texto"></textarea>
+        </label>
+        <input type="submit" value="Enviar Solicitação" ng-click="envia(form)">
+    </form>
+    <p>{{dados.dados[0].razaosocial}}</p>
+    <p>{{dados.dados[0].endereco}} - {{dados.dados[0].numero}}</p>
+    <p>{{dados.dados[0].bairro}} - {{dados.dados[0].cidade}} - {{dados.dados[0].uf}}</p>
+    <p>CEP: {{dados.dados[0].cep}}</p>
+    <br>
+    <h2>{{dados.dados[0].telefone1}}</h2>
+    <h2>{{dados.dados[0].telefone2}}</h2>
     <span id="voltar"><a href="javascript:history.back(-1);">Voltar</a></span>
 </article>

@@ -138,14 +138,23 @@ body{
           dd{
             font-size: 28px;
             border-bottom: 1px solid $amarelo;
+            margin-bottom: 20px;
           }
           dt{
             display: table;
+            margin-bottom: 40px;
+            div{
+              float: left;
+              display: table;
+              margin: 0 20px 20px 0;
+            }
+            p{
+              font-size: 20px;
+            }
             figure{
               width: 212px;
               height: 160px;
               padding: 10px;
-              margin: 9px;
               display: block;
               float: left;
               figcaption{

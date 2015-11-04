@@ -1,5 +1,14 @@
-<article id="meio-conteudo">
+<article id="meio-conteudo" ng-controller="CtrlServicos">
     <h1>Serviços</h1>
-
+    <p>{{abertura}}</p>
+    <dl>
+        <servicos ng-repeat="servico in servicos">
+            <dd>{{servico.titulo}}</dd>
+            <dt>
+                <div><img src="http://www.orion-industrial.com.br/arquivos/servico/front-{{servico.id}}-0.jpg"></div>
+                <p>{{servico.texto}}</p>
+            </dt>
+        </servicos>
+    </dl>
     <span id="voltar"><a href="javascript:history.back(-1);">Voltar</a></span>
 </article>

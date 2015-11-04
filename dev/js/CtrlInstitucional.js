@@ -7,6 +7,6 @@ orion
               $scope.foto = "http://www.orion-industrial.com.br/arquivos/institucional/zooms-"+id+"-0.jpg";
             })
             .error(function(){
-                console.log("erro");
+                console.error("Houve uma falha ao carregar webservice");
             });
     }]);

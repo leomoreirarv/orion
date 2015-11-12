@@ -2,14 +2,27 @@
 <html lang="pt-br" ng-app="Orion">
 <head>
     <meta charset="UTF-8">
-    <title>Órion Industrial - Distribuidor Parker</title>
+    <title>Orion Industrial - Distribuidor Parker</title>
     <link href="css/all.min.css" rel="stylesheet" type="text/css">
     <script src="js/all.min.js"></script>
 </head>
 <body>
     <div id="todo">
         <header>
-            <div id="linha-topo"><a href="#" id="btn-acesso-restrito">Acesso Restrito</a></div>
+            <div id="linha-topo">
+                <a
+                        ng-href=""
+                        id="btn-acesso-restrito"
+                        ng-model="collapsed"
+                        ng-click="collapsed=!collapsed">
+                    Acesso Restrito</a>
+
+                <ul ng-show="collapsed">
+                    <li><a target="_blank" href="https://www.phconnect.com/">PHConnect</a></li>
+                    <li><a target="_blank" href="https://www.extranetparker.com.br/home2/">Extranet Parker</a></li>
+                    <li><a target="_blank" href="https://br.egestor.com.br/login/juniororionindustrial">Sistema de gestão</a></li>
+                </ul>
+            </div>
             <h1 id="logo-topo">Órion Industrial</h1>
             <nav id="menu-topo">
                 <ul>
@@ -34,14 +47,22 @@
                     <p>orion@orion-industrial.com.br -  www.orion-industrial.com.br</p>
                     <div id="linha-maps-form">
                         <div>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30532.7501964502!2d-49.282821616671164!3d-16.68375639093603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935ef11ba7c0de7f%3A0x44cf685a50c00cdd!2sSt.+Marista%2C+Goi%C3%A2nia+-+GO!5e0!3m2!1spt-BR!2sbr!4v1444757934493" width="220" height="230" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3820.8018700244456!2d-49.34962604917264!3d-16.736734851239017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDQ0JzEyLjMiUyA0OcKwMjAnNTAuOCJX!5e0!3m2!1spt-BR!2sbr!4v1447262726942" width="220" height="230" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
-                        <div>
-                            <form action="#" method="post">
-                                <input type="text" placeholder="Nome completo">
-                                <input type="email" placeholder="email@email.com">
-                                <textarea></textarea>
-                                <input type="submit" value="Enviar Mensagem">
+                        <div ng-controller="CtrlContato">
+                            <form>
+                                <div ng-hide="!mensagem" class="mensagem">{{mensagem}}</div>
+
+                                <label>Nome:
+                                    <input type="text" ng-model="subForm.nome" placeholder="Nome Completo"/>
+                                </label>
+                                <label>E-mail:
+                                    <input type="text" ng-model="subForm.email" placeholder="email@email.com"/>
+                                </label>
+                                <label>Solicitação:
+                                    <textarea ng-model="subForm.texto" placeholder="Mensagem..."></textarea>
+                                </label>
+                                <input type="submit" value="Enviar Solicitação" ng-click="envia(subForm)">
                             </form>
                         </div>
                     </div>

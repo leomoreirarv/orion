@@ -21,7 +21,7 @@
         $html .= "<p>$chave : $valor</p>";
     endforeach;
 
-    $To = "leonardomm@gmail.com";
+    $To = "orion@orion-industrial.com.br";
     $Subject = "Enviado pelo website www.orion-industrial.com.br";
 
 

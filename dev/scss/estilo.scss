@@ -30,8 +30,31 @@ body{
       margin: 0 auto;
 
       div#linha-topo {
+        position: relative;
         display: table;
         width: 100%;
+        ul{
+          display: block;
+          position: absolute;
+          background: $amarelo;
+          z-index: 1000;
+          right: 0;
+          top: 21px;
+          list-style: none;
+          padding: 0;
+          width: 103px;
+          li{
+            a{
+              font-size: 12px;
+              padding: 5px;
+              display: block;
+              &:hover{
+                background: $cinza;
+                color: #fff;
+              }
+            }
+          }
+        }
         a#btn-acesso-restrito {
           background: $amarelo;
           display: block;
@@ -293,6 +316,7 @@ body{
             border-radius: 105px;
             border: solid 6px $cinza;
             margin-right: 20px;
+            float: left;
           }
           h4{
             padding-top: 35px;
@@ -416,26 +440,35 @@ body{
               float: left;
               width: 50%;
               form{
-                input[type=text],
-                input[type=email],
-                textarea{
-                  width: 225px;
-                  padding: 10px 5px;
-                  margin-bottom: 10px;
-                  height: 16px;
-                  box-shadow: inset #666 3px 3px 15px;
-                  color: #000;
+                div.mensagem{
+                  color: #fff;
+                  text-align: center;
+                  display: block;
                 }
-                textarea{
-                  height: 70px;
+                label {
+                  display: block;
+                  input[type=text],
+                  input[type=email],
+                  textarea {
+                    width: 225px;
+                    padding: 10px 5px;
+                    margin-bottom: 10px;
+                    height: 16px;
+                    box-shadow: inset #666 3px 3px 15px;
+                    color: #000;
+                  }
+                  textarea {
+                    height: 70px;
+                  }
                 }
-                input[type=submit]{
-                  width: 103px;
-                  height: 25px;
-                  background: $amarelo;
-                  color: #000;font-size: 12px;
-                  float: right;
-                }
+                input[type=submit] {
+                   width: 103px;
+                   height: 25px;
+                   background: $amarelo;
+                   color: #000;
+                   font-size: 12px;
+                   float: right;
+                 }
               }
             }
           }
